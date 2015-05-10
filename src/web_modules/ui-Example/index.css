@@ -1,0 +1,18 @@
+.Example {
+  align-items: center;
+  border: 0.1rem solid #000;
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+}
+
+/* All variables are stored in config/css.config.js at the root */
+.Example--active {
+  background-color: var(--color-black);
+  border: 0.2rem solid var(--color-red);
+}
+
+.ExampleButton {
+  height: 2rem;
+  width: 10rem;
+}

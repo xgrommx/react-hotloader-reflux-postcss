@@ -1,0 +1,21 @@
+{
+  "name": "react-reflux-hot-postcss-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for ReactJS using Reflux, React-Hot-Loader, and PostCSS",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Harry Hedger <hedgerh@gmail.com> (http://github.com/hedgerh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hedgerh/react-reflux-hot-postcss-boilerplate/issues"
+  },
+  "dependencies": {
+    "classnames": "^2.1.1",
+    "react": "^0.13.3",
+    "react-document-title": "^1.0.2",
+    "react-router": "^0.13.3",
+    "reflux": "^0.2.7",
+    "superagent": "^1.2.0"
+  }
+}
