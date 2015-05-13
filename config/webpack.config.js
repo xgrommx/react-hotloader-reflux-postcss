@@ -1,7 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var webpack = require('webpack');
-var cssConfig = require('./config/css.config');
+var cssConfig = require('./css.config');
 
 // postcss plugins
 var autoprefixer = require('autoprefixer-core');
@@ -12,21 +12,25 @@ var customMedia = require('postcss-custom-media');
 
 module.exports = {
   devtool: 'eval',
+
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
+    'webpack/hot/dev-server',
     './src/web_modules/index'
   ],
+
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
     filename: 'js/bundle.js',
-    publicPath: '/dist/'
+    publicPath: '/assets'
   },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('css/bundle.css')
   ],
+
   postcss: [
     BEMLinter(),
     customMedia(cssConfig.customMedia),
@@ -34,14 +38,16 @@ module.exports = {
     colorFunction(),
     autoprefixer(cssConfig.autoprefixer).postcss
   ],
+
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.css']
   },
+
   module: {
     loaders: [{
       test: /\.jsx?$/,
       loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src')
+      include: path.join(__dirname, '../src')
     },
     {
       test: /\.css$/,

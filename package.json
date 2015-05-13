@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "Boilerplate for ReactJS using Reflux, React-Hot-Loader, and PostCSS",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo 'please set up a test script.'"
   },
   "git-pre-hooks": {
-    "pre-push": "echo 'git pre push hook for testing or something'"
+    "pre-push": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,13 @@
     "reflux",
     "refluxjs",
     "boilerplate",
+    "starter",
     "hot",
-    "reload",
-    "hmr",
+    "hotloader",
+    "hot-loader",
+    "livereload",
     "live",
-    "edit",
+    "reload",
     "postcss",
     "webpack"
   ],
